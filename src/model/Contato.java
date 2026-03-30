@@ -1,13 +1,34 @@
 package model;
 
 public class Contato {
-
+    public int id;
     private String tipo;
     private String valor;
+
+
+//[********* IMPLEMENTAÇÃO DA BIDIRECIONAL ********* ]
+    public Pessoa pessoa;
 
     public Contato(String tipo, String valor) {
         this.tipo = tipo;
         this.valor = valor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+
     }
 
     public String getTipo() {
@@ -28,6 +49,9 @@ public class Contato {
 
     @Override
     public String toString() {
-        return tipo + ": " + valor;
+        return "Contato{" +
+                "tipo='" + tipo + '\'' +
+                ", valor='" + valor + '\'' +
+                '}';
     }
 }
